@@ -138,8 +138,8 @@ class Combined_Online_Algo():
             MIGR_COST[p][q] = LATENCY_MATRIX[p][q]+diff
 
 
-        self.storageCost_online=STORAGE_RANDOM_LOW_RANGE_1
-        self.storageCost_name = "STORAGE_RANDOM_LOW_RANGE_1"
+        self.storageCost_online=STORAGE_RANDOM_HIGH_RANGE_1
+        self.storageCost_name = "STORAGE_RANDOM_HIGH_RANGE_1"
         # self.storageCost_online=STORAGE_COST_temp
 
         # self.commDelay_online=LATENCY_MATRIX#np.array([[2.55316,9.70525, 7.02418], [9.70525, 2.55389,6.25835], [7.02418,6.26684,2.55398]])
@@ -352,14 +352,16 @@ class Combined_Online_Algo():
         cost_differences = latency_costs - storage_costs
         valid_indices = np.where(latency_costs > storage_costs)[0]  # Only consider indices where latency > storage
 
-        if valid_indices.size == 0:
-            # No valid backup location
-            return None
+        # if valid_indices.size == 0:
+        #     # No valid backup location
+        #     return None
+        if valid_indices.size != 0:
+            optimal_index = valid_indices[np.argmax(cost_differences[valid_indices])]  # Optimal index
 
-        optimal_index = valid_indices[np.argmax(cost_differences[valid_indices])]  # Optimal index
-
-        # Update backup counts for the optimal location
-        self.backup_counts[optimal_index] += 1
+            # Update backup counts for the optimal location
+            self.backup_counts[optimal_index] += 1
+        else:
+            optimal_index = None
 
         # Store combined data for all valid locations and mark the optimal one
         self.combined_data.extend(
@@ -460,7 +462,10 @@ class Combined_Online_Algo():
         plt.legend()
 
         y_min = 0
-        y_max = max(ratios)
+        if ratios:
+             y_max = max(ratios)
+        else:
+            y_max = 2
         plt.ylim(y_min - 0.5, y_max + 0.5)
 
         if not os.path.exists(save_folder):
@@ -545,7 +550,11 @@ class Combined_Online_Algo():
         # Calculate probabilities for each index
         total_backups = sum(backup_counts)  # Total backups placed
         probabilities = [count / total_backups if total_backups > 0 else 0 for count in backup_counts]  # Conditional probabilities
-        overall_probability = total_backups / (total_count/NUM_ACCESS_POINTS) 
+        if total_count:
+            overall_probability = total_backups / (total_count/NUM_ACCESS_POINTS) 
+        else:
+            overall_probability = 0
+        
 
         # Plot: Probability distribution across indices
         locations = list(range(len(backup_counts)))
