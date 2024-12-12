@@ -1,0 +1,37 @@
+Sept 7th:
+- Add support for Location-Based Failures
+
+June 23:
+- Results
+- The three graphs averaged over 5 runs.
+7. Write a paragraph about working and results of Multi-User DQN.
+2. Run everything for 5 times and take an average
+3. Plot the comparison graphs -> with error margins
+4. Avg over 5 runs -> Clarified
+    a. store the running average over 5 runs.
+    b at each time step, find max, min, avg.
+    c. shade between max and minimum, plot the avg
+
+5. For journal in future -> how does negative reward influence.
+    (How quickly or where it converges with different neg rewards)
+7. Draw a diagram explaining the working.
+8. Save and load a model -> CMD LINE
+9. Subtiled and captions, small paragraph
+
+-------------------------------------------------------------------------------
+
+Jun 9th:
+Draw diagrams for the working of the model.
+Explanation of the model and the use of the importance weight and the rewards:
+    - For the inclusion of the importance weights and the rewards:
+        check the comments in MainAlgo/DQN.py.
+    - The error between the target and the current 'state action values' is calculated:
+        - The error used is MSE error.
+        - Thus the difference between the state action values for the current actions chosen from the policy network and for the maximum from the target network is calculated, the error is then added, and mean error is found, and then the derivative with respect to the error is calculated and it is back propagated throught the mean (addition) first and then it is further backpropagated to the system.
+
+
+May 17th:
+TODOs:
+6. How is reward & imp_wts used to update the network?
+1. Baselines -> to be implemented on the server
+--------------------------------

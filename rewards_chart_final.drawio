@@ -1,0 +1,171 @@
+<mxfile host="app.diagrams.net" modified="2023-10-05T22:20:18.310Z" agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/117.0.0.0 Safari/537.36" etag="TyC3kQEU_ffKnp3ET6Zh" version="21.2.2" type="device">
+  <diagram name="Page-1" id="_xku15Cvo-pyy9_KRBlO">
+    <mxGraphModel dx="3576" dy="1743" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="giWc7YDq58C2GlWpR-aH-3" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="giWc7YDq58C2GlWpR-aH-1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="740" y="190" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="giWc7YDq58C2GlWpR-aH-4" value="YES" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="giWc7YDq58C2GlWpR-aH-3">
+          <mxGeometry x="0.0451" y="1" relative="1" as="geometry">
+            <mxPoint x="-1" y="-21" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="giWc7YDq58C2GlWpR-aH-12" value="Yes" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="giWc7YDq58C2GlWpR-aH-3">
+          <mxGeometry x="0.411" y="-1" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="giWc7YDq58C2GlWpR-aH-6" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="giWc7YDq58C2GlWpR-aH-1" target="giWc7YDq58C2GlWpR-aH-5">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="giWc7YDq58C2GlWpR-aH-7" value="No" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="giWc7YDq58C2GlWpR-aH-6">
+          <mxGeometry x="-0.0097" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="giWc7YDq58C2GlWpR-aH-1" value="IF &lt;b&gt;&lt;font color=&quot;#0000ff&quot;&gt;server_location_down&lt;/font&gt;&lt;/b&gt; OR &lt;b&gt;&lt;font color=&quot;#0000ff&quot;&gt;rare_event_occured&lt;/font&gt;&lt;/b&gt;" style="rhombus;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="1">
+          <mxGeometry x="230" y="80" width="420" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="giWc7YDq58C2GlWpR-aH-20" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=1.007;entryY=0.588;entryDx=0;entryDy=0;entryPerimeter=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" edge="1" parent="1" source="giWc7YDq58C2GlWpR-aH-2" target="giWc7YDq58C2GlWpR-aH-16">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="960.0344827586209" y="420" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="giWc7YDq58C2GlWpR-aH-2" value="reward += BAD_AP_SELECTION_REW" style="whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;" vertex="1" parent="1">
+          <mxGeometry x="850" y="240" width="420" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="giWc7YDq58C2GlWpR-aH-36" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="giWc7YDq58C2GlWpR-aH-5" target="giWc7YDq58C2GlWpR-aH-35">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="-80" y="1070" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="giWc7YDq58C2GlWpR-aH-5" value="reward += - communication_delay[b/w user location and new service location] - service_migration_cost - storage_cost - backup_migration_cost" style="whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="1">
+          <mxGeometry x="-270" y="280" width="380" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="giWc7YDq58C2GlWpR-aH-8" value="Implies:&lt;br&gt;&lt;div style=&quot;text-align: left;&quot;&gt;1. if&amp;nbsp;&lt;span style=&quot;text-align: center;&quot;&gt;server_location_down == True:&lt;/span&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;&amp;nbsp;The action taken by the agent was wrong, which means, it placed the backup in a location that was still down (since some of APs stay down for &amp;gt; 1 time steps)&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;2. if&amp;nbsp;&lt;span style=&quot;background-color: initial;&quot;&gt;rare_event_occured == True:&amp;nbsp;&lt;/span&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;The service location had an anomaly.&lt;/span&gt;&lt;/div&gt;" style="shape=callout;whiteSpace=wrap;html=1;perimeter=calloutPerimeter;fillColor=#ffe6cc;strokeColor=#d79b00;" vertex="1" parent="1">
+          <mxGeometry x="630" y="10" width="360" height="130" as="geometry" />
+        </mxCell>
+        <mxCell id="giWc7YDq58C2GlWpR-aH-10" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="giWc7YDq58C2GlWpR-aH-9" target="giWc7YDq58C2GlWpR-aH-1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="giWc7YDq58C2GlWpR-aH-9" value="reward = 0" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f5f5f5;fontColor=#333333;strokeColor=#666666;" vertex="1" parent="1">
+          <mxGeometry x="380" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="giWc7YDq58C2GlWpR-aH-14" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="giWc7YDq58C2GlWpR-aH-11" target="giWc7YDq58C2GlWpR-aH-2">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1060" y="215" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="giWc7YDq58C2GlWpR-aH-15" value="Yes" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="giWc7YDq58C2GlWpR-aH-14">
+          <mxGeometry x="-0.3249" y="2" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="giWc7YDq58C2GlWpR-aH-17" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="giWc7YDq58C2GlWpR-aH-11" target="giWc7YDq58C2GlWpR-aH-16">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="giWc7YDq58C2GlWpR-aH-18" value="No" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="giWc7YDq58C2GlWpR-aH-17">
+          <mxGeometry x="-0.1145" y="1" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="giWc7YDq58C2GlWpR-aH-11" value="IF &lt;b&gt;&lt;font color=&quot;#0000ff&quot;&gt;server_location_down&lt;/font&gt;&lt;/b&gt;" style="rhombus;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
+          <mxGeometry x="620" y="190" width="240" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="giWc7YDq58C2GlWpR-aH-13" value="BAD_AP_SELECTION_REW = -200 OR -50&lt;br&gt;NO_OR_BAD_BACKUP_REW = -8000" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="-730" y="300" width="270" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="giWc7YDq58C2GlWpR-aH-23" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="giWc7YDq58C2GlWpR-aH-16" target="giWc7YDq58C2GlWpR-aH-22">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="giWc7YDq58C2GlWpR-aH-16" value="failure_location = new_service_location" style="whiteSpace=wrap;html=1;fillColor=#f5f5f5;fontColor=#333333;strokeColor=#666666;" vertex="1" parent="1">
+          <mxGeometry x="680" y="400" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="giWc7YDq58C2GlWpR-aH-21" value="new_service_location is where the action chooses to place the user service to" style="shape=callout;whiteSpace=wrap;html=1;perimeter=calloutPerimeter;position2=0.92;fillColor=#ffe6cc;strokeColor=#d79b00;" vertex="1" parent="1">
+          <mxGeometry x="450" y="340" width="230" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="giWc7YDq58C2GlWpR-aH-25" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="giWc7YDq58C2GlWpR-aH-22" target="giWc7YDq58C2GlWpR-aH-24">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="giWc7YDq58C2GlWpR-aH-27" value="Yes" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="giWc7YDq58C2GlWpR-aH-25">
+          <mxGeometry x="-0.5344" y="1" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="giWc7YDq58C2GlWpR-aH-29" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="giWc7YDq58C2GlWpR-aH-22" target="giWc7YDq58C2GlWpR-aH-28">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="giWc7YDq58C2GlWpR-aH-31" value="No" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="giWc7YDq58C2GlWpR-aH-29">
+          <mxGeometry x="-0.1571" y="2" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="giWc7YDq58C2GlWpR-aH-22" value="IF no backup" style="rhombus;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
+          <mxGeometry x="620" y="550" width="240" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="giWc7YDq58C2GlWpR-aH-39" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="giWc7YDq58C2GlWpR-aH-24" target="giWc7YDq58C2GlWpR-aH-35">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1090" y="1070" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="giWc7YDq58C2GlWpR-aH-24" value="reward +=&amp;nbsp;NO_OR_BAD_BACKUP_REW - service_migration_cost" style="whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;" vertex="1" parent="1">
+          <mxGeometry x="880" y="670" width="420" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="giWc7YDq58C2GlWpR-aH-38" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.75;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="giWc7YDq58C2GlWpR-aH-26" target="giWc7YDq58C2GlWpR-aH-35">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="giWc7YDq58C2GlWpR-aH-26" value="reward +=&amp;nbsp;NO_OR_BAD_BACKUP_REW - service_migration_cost - storage_cost - backup_migration_cost" style="whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;" vertex="1" parent="1">
+          <mxGeometry x="530" y="900" width="420" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="giWc7YDq58C2GlWpR-aH-30" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="giWc7YDq58C2GlWpR-aH-28" target="giWc7YDq58C2GlWpR-aH-26">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="giWc7YDq58C2GlWpR-aH-32" value="Yes" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="giWc7YDq58C2GlWpR-aH-30">
+          <mxGeometry x="-0.1889" y="-2" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="giWc7YDq58C2GlWpR-aH-34" value="No" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="giWc7YDq58C2GlWpR-aH-28" target="giWc7YDq58C2GlWpR-aH-33">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="giWc7YDq58C2GlWpR-aH-28" value="IF backup == failure_location OR &lt;b&gt;&lt;font color=&quot;#0000ff&quot;&gt;backup_location_down&lt;/font&gt;&lt;/b&gt;" style="rhombus;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
+          <mxGeometry x="540" y="730" width="400" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="giWc7YDq58C2GlWpR-aH-37" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.25;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="giWc7YDq58C2GlWpR-aH-33" target="giWc7YDq58C2GlWpR-aH-35">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="giWc7YDq58C2GlWpR-aH-33" value="reward += - communication_delay[b/w user location and backup location] - service_migration_cost - storage_cost - backup_migration_cost" style="whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="1">
+          <mxGeometry x="50" y="732.5" width="365" height="65" as="geometry" />
+        </mxCell>
+        <mxCell id="giWc7YDq58C2GlWpR-aH-42" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="giWc7YDq58C2GlWpR-aH-35" target="giWc7YDq58C2GlWpR-aH-41">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="giWc7YDq58C2GlWpR-aH-35" value="reward += - computational_delay" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f5f5f5;fontColor=#333333;strokeColor=#666666;" vertex="1" parent="1">
+          <mxGeometry x="270" y="1040" width="210" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="giWc7YDq58C2GlWpR-aH-40" value="Computation delay is directly proportional to number of users using an AP, so more users using an AP, more delay it is" style="shape=callout;whiteSpace=wrap;html=1;perimeter=calloutPerimeter;position2=1;fillColor=#ffe6cc;strokeColor=#d79b00;" vertex="1" parent="1">
+          <mxGeometry x="-30" y="970" width="280" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="giWc7YDq58C2GlWpR-aH-41" value="return reward" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f5f5f5;fontColor=#333333;strokeColor=#666666;" vertex="1" parent="1">
+          <mxGeometry x="270" y="1180" width="210" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="giWc7YDq58C2GlWpR-aH-46" value="&lt;div style=&quot;&quot;&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;1. &lt;b&gt;&lt;font color=&quot;#3333ff&quot;&gt;server_location_down&lt;/font&gt;&lt;/b&gt;: new_service_location is down&lt;/span&gt;&lt;/div&gt;&lt;span style=&quot;&quot;&gt;	&lt;/span&gt;- new_service_location is obtained from the action taken by the &lt;span style=&quot;&quot;&gt;	&lt;/span&gt;agent at that time step. This is needed since some of the &quot;WEAK&quot; &lt;span style=&quot;&quot;&gt;	&lt;/span&gt;APs might take &amp;gt;1 time step to come up and if service is placed on such an AP and that AP is already down due to an outage in a previous step and has not recovered yet.&lt;br&gt;2. &lt;b&gt;&lt;font color=&quot;#0000ff&quot;&gt;rare_event_occured&lt;/font&gt;&lt;/b&gt;: random_number[prev_service_location] &amp;lt; anomaly_sampling_distribution [user, user_state]&lt;br&gt;&lt;span style=&quot;&quot;&gt;	&lt;/span&gt;- we generate a random number for each AP at the beginning of &lt;span style=&quot;&quot;&gt;	&lt;/span&gt;each time step&lt;br&gt;&lt;span style=&quot;&quot;&gt;	&lt;/span&gt;- anomaly_sampling_distribution is stored per user independently to &lt;span style=&quot;&quot;&gt;	&lt;/span&gt;prevent an explosion in number of states&lt;br&gt;3.&amp;nbsp;&lt;b&gt;&lt;font color=&quot;#0000ff&quot;&gt;backup_location_down&lt;/font&gt;&lt;font color=&quot;#0a0a0a&quot;&gt;:&amp;nbsp;&lt;/font&gt;&lt;/b&gt;new_backup_location is down&lt;b&gt;&lt;font color=&quot;#0a0a0a&quot;&gt;&lt;br&gt;&lt;/font&gt;&lt;/b&gt;&lt;span style=&quot;border-color: var(--border-color);&quot;&gt;&lt;/span&gt;- new_backup_location&amp;nbsp;is obtained from the action taken by the&amp;nbsp;&lt;span style=&quot;border-color: var(--border-color);&quot;&gt;&lt;/span&gt;agent at that time step. This is needed since some of the &quot;WEAK&quot;&amp;nbsp;&lt;span style=&quot;border-color: var(--border-color);&quot;&gt;&lt;/span&gt;APs might take &amp;gt;1 time step to come up and if backup is placed on such an AP and that AP is already down due to an outage in a previous step&amp;nbsp;and has not recovered yet.&lt;b&gt;&lt;br&gt;&lt;/b&gt;" style="rounded=0;whiteSpace=wrap;html=1;align=left;" vertex="1" parent="1">
+          <mxGeometry x="-730" y="30" width="440" height="235" as="geometry" />
+        </mxCell>
+        <mxCell id="giWc7YDq58C2GlWpR-aH-47" value="Explanation of different &lt;b&gt;rewards&lt;/b&gt;:&lt;br&gt;1.&amp;nbsp;&lt;b&gt;BAD_AP_SELECTION_REW&lt;/b&gt;: The negative reward which is given to the Agent, if it places user service on an AP which is current DOWN due to an outage in a previous step. This is given irrespective of the fact whether there is a back up or not or there is an anomaly at that step or not.&lt;br&gt;2.&amp;nbsp;&lt;b&gt;NO_OR_BAD_BACKUP_REW&lt;/b&gt;: The negative reward given when there is an anomaly AND&lt;br&gt;&lt;span style=&quot;&quot;&gt;	&lt;/span&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;	&lt;/span&gt;- either no backup&lt;br&gt;&lt;span style=&quot;&quot;&gt;	&lt;/span&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;	&lt;/span&gt;- or backup location is same as the service location (where the anomaly has &lt;span style=&quot;white-space: pre;&quot;&gt;	&lt;/span&gt;&lt;span style=&quot;&quot;&gt;	&lt;/span&gt;occurred)&lt;br&gt;&lt;span style=&quot;&quot;&gt;	&lt;/span&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;	&lt;/span&gt;- or backup location is DOWN at the current time step&lt;br&gt;3. &lt;b&gt;backup_migration_cost&lt;/b&gt;: The migration cost which is associated when the backup position at last time step is different from the current back up location.&lt;br&gt;4.&amp;nbsp;&lt;b&gt;service_migration_cost&lt;/b&gt;: The migration cost which is associated when the service position at last time step is different from the current service location.&lt;br&gt;5.&amp;nbsp;&lt;b&gt;storage_cost&lt;/b&gt;: cost associated with using a backup.&lt;br&gt;6.&amp;nbsp;&lt;b&gt;communication_delay&lt;/b&gt;: same as the migration cost for computational purpose&lt;br&gt;7.&amp;nbsp;&lt;b&gt;computational_delay&lt;/b&gt;: k*1/(25 - no_of_users_on_this_AP)&lt;br&gt;&lt;span style=&quot;&quot;&gt;	&lt;/span&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;	&lt;/span&gt;- Number 25 is an arbitrarily large number chosen so that APs do not run out of &lt;span style=&quot;white-space: pre;&quot;&gt;	&lt;/span&gt;capacity &lt;span style=&quot;&quot;&gt;	&lt;/span&gt;even when all users are put on 1 AP. We have only carried out &lt;span style=&quot;white-space: pre;&quot;&gt;	&lt;/span&gt;experiments &lt;span style=&quot;&quot;&gt;	&lt;/span&gt;with total no. of users lesser than that, so it works&lt;br&gt;&lt;span style=&quot;&quot;&gt;	&lt;/span&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;	&lt;/span&gt;- k is the&amp;nbsp;Computation Delay scaling factor which we vary in our experiments.&amp;nbsp;" style="rounded=0;whiteSpace=wrap;html=1;align=left;" vertex="1" parent="1">
+          <mxGeometry x="-730" y="400" width="450" height="320" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

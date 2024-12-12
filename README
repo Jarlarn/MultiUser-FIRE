@@ -1,0 +1,3 @@
+To change the configuration of the project:
+1. Set the variable - RUNNING_ON_COLAB to true or false based on whether it is being run on colab or not.
+2. 
