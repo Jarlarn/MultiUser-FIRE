@@ -143,8 +143,8 @@ class Combined_Online_Algo():
         # self.storageCost_online=STORAGE_COST_temp
 
         # self.commDelay_online=LATENCY_MATRIX#np.array([[2.55316,9.70525, 7.02418], [9.70525, 2.55389,6.25835], [7.02418,6.26684,2.55398]])
-        self.commDelay_online=LATENCY_MATRIX_RANDOM_3
-        self.commDelay_online_name = "LATENCY_MATRIX_RANDOM_3"
+        self.commDelay_online=LATENCY_MATRIX_RANDOM_1
+        self.commDelay_online_name = "LATENCY_MATRIX_RANDOM_1"
 
 
         self.migrationCost_online=MIGR_COST
@@ -315,11 +315,11 @@ class Combined_Online_Algo():
 
         
         total_count = len(self.combined_data)
-        save_folder = rf"C:\Users\Jenny\Desktop\MultiUser-FIRE-main\Figures\{self.commDelay_online_name}_{self.storageCost_name}"
+        save_folder = rf"C:\Users\Jenny\Desktop\MultiUser-FIRE\Figures\{self.commDelay_online_name}_{self.storageCost_name}"
         filenames = {
             "ratio_plot": "latency_storage_ratio.png",
-            "decision_plot": "Backup_Distribution.png",
-            "probability_plot": "Latency_BackupDecision_vs_Location.png",
+            "decision_plot": "Latency_BackupDecision_vs_Location.png",
+            "probability_plot": "Backup_Distribution.png",
         }
 
         self.plot_and_save_all(self.combined_data, total_count, self.backup_counts, save_folder, filenames)
