@@ -477,6 +477,36 @@ class Combined_Online_Algo():
 
 
     def plot_backup_decisions(self, combined_data, save_folder, filename):
+        """
+        Plots backup decisions based on latency costs and highlights the optimal backup placements.
+
+        This function creates a scatter plot to visualize backup decisions for different locations, 
+        where points are categorized as:
+        - Backup locations (decision = 1) in dark green.
+        - Non-backup locations (decision = 0) in firebrick red.
+        - Optimal backup placements highlighted in gold with black edges.
+
+        Parameters:
+            combined_data (list): A list of data entries, where each entry is structured as:
+                                [latency_cost, storage_cost, backup_decision, location_index, status].
+                                - latency_cost (float): The latency cost for a location.
+                                - storage_cost (float): The storage cost for a location.
+                                - backup_decision (int): 1 if a backup decision is made, 0 otherwise.
+                                - location_index (int): The index of the location.
+                                - status (str): 
+                                    - "Optimal" for the optimal backup location.
+                                    - "Non-Optimal" for valid but non-optimal backup locations.
+                                    - "Non-Valid" for locations where latency cost is not greater than storage cost.
+            save_folder (str): The folder path where the plot will be saved.
+            filename (str): The name of the file to save the plot (e.g., "backup_decisions.png").
+
+        Output:
+            - A scatter plot saved to the specified folder and file, illustrating:
+            - Locations where a backup is placed (green).
+            - Locations where no backup is placed (red).
+            - The optimal backup location(s) (gold with black edges).
+        """
+
         combined_data.sort(key=lambda x: x[0])
         latency_costs = [item[0] for item in combined_data]
         backup_decisions = [item[2] for item in combined_data]
